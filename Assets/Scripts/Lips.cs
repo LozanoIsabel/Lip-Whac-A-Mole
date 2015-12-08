@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Lips : MonoBehaviour {
-	public Button b;
+
+public Button b;
 
  //private Vector3 zeroSize = new Vector3(0,0,0);
 
@@ -16,13 +17,14 @@ public class Lips : MonoBehaviour {
 	void Update () {
 	}
 
-void dissappearLips () {
+private void dissappearLips () {
 
 gameObject.GetComponent<Button>().interactable = false;
 
 }
 
-public void turnRed () {
+private void turnRed () {
+	//if()
 	GetComponent<Image>().color = Color.red;
 	//GetComponent<Button>().color = Color.white;
 	//GetComponent<Button>().color = Color.white;
@@ -45,10 +47,5 @@ public void sizeDown () {
 	//if(transform.localScale > zeroSize)
 	transform.localScale = new Vector3(transform.localScale.x*.2F, transform.localScale.y*.2F, 0);
 }
-public class BigLips : Lips {
 
-	void wiggle () {
-
-	}
-}
 }
