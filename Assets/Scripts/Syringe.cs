@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Syringe : MonoBehaviour {
+	public GameObject Bullet;
+	public Canvas canvas;
 
 	// Use this for initialization
 	void Start () {
@@ -10,15 +12,21 @@ public class Syringe : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	respawnBullets();
 	}
 
 public void respawnBullets () {
+
 	if (Input.GetKeyDown("up"))
             print("up arrow key is held down");
         
     if (Input.GetKeyDown("space"))
-            print("down arrow key is held down");
+    	{
+    	GameObject myBullet;
+
+    		myBullet = Instantiate(Bullet, this.gameObject.transform.position, Quaternion.identity) as GameObject;
+    		myBullet.transform.SetParent(canvas.transform);
+        }
 	}
 
 public void moveSyringe () {

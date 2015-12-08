@@ -25,6 +25,8 @@ public void OnCollisionEnter2D(Collision2D coll) {
 	if(coll.gameObject.tag == "Lip") {
     	coll.gameObject.SetActive(false);
 		this.gameObject.SetActive(false);
+		Destroy(this.gameObject);
+		Destroy(coll.gameObject);
 	}
 	}
 
