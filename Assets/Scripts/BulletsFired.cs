@@ -14,6 +14,7 @@ public class BulletsFired : MonoBehaviour {
 	
 	}
 
+
 public void shoot () {
 	//if()
 	//CharacterController.detectCollisions

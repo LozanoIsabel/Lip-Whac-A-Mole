@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\BulletsFired.cs" />
      <Compile Include="Assets\Scripts\Lips.cs" />
      <Compile Include="Assets\Scripts\Syringe.cs" />
+     <Compile Include="Assets\Scripts\WinLosePage.cs" />
+     <Compile Include="Assets\Scripts\WinPage.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
