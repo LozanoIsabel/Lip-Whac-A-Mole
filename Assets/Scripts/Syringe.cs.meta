@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 8de435d868ae34f3b8faa3912ca27da7
-timeCreated: 1449468262
+timeCreated: 1449709491
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SyringeBullet: {fileID: 195492, guid: 7552464222ff64d46a198ef569c20e41, type: 2}
+  - Dr: {instanceID: 0}
+  - canvas: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

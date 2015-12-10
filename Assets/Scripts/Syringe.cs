@@ -2,35 +2,34 @@
 using System.Collections;
 
 public class Syringe : MonoBehaviour {
-	public GameObject Bullet;
-	public GameObject SyringeGun;
+	public GameObject SyringeBullet;
+	public GameObject Dr;
 	public Canvas canvas;
-	public Vector3 SyringeMovement;
-	public float SyringeGunSpeed = 10f;
+	public Vector3 DrMovement;
+	public float DrSpeed = 1f;
 	// Use this for initialization
 	void Start () {
 	
-	SyringeMovement = new Vector3();
+	DrMovement = new Vector3();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	respawnBullets();
+	respawnSyringes();
 
-	SyringeMovement.x = Input.GetAxis("Horizontal");
-	SyringeMovement.y = Input.GetAxis("Vertical");
+	DrMovement.x = Input.GetAxis("Horizontal");
+	DrMovement.y = Input.GetAxis("Vertical");
 
-	SyringeGun.transform.position += SyringeMovement * SyringeGunSpeed * Time.deltaTime;
+	Dr.transform.position += DrMovement * DrSpeed * Time.deltaTime;
 	}
 
-public void respawnBullets () {
+public void respawnSyringes () {
     if (Input.GetKeyDown("space"))
     	{
-    	GameObject myBullet;
-
-    	myBullet = Instantiate(Bullet, this.gameObject.transform.position, Quaternion.identity) as GameObject;
-    	myBullet.transform.SetParent(canvas.transform);
+    	GameObject mySyringe;
+    	mySyringe = Instantiate(SyringeBullet, this.gameObject.transform.position, Quaternion.identity) as GameObject;
+    	mySyringe.transform.SetParent(canvas.transform);
         }
 	}
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class BulletsFired : MonoBehaviour {
+public class SyringesFired : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,7 +11,7 @@ public class BulletsFired : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		//transform.Translate();
 	}
 
 
