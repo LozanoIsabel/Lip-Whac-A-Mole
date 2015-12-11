@@ -27,5 +27,6 @@ public void OnCollisionEnter2D(Collision2D coll) {
 
 public void EveryLipHit() {
 	LipsHit += 1;
+	print("I hit a lip");
 }
 }
