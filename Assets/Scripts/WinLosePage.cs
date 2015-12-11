@@ -11,8 +11,8 @@ public class WinLosePage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(LipsHit == 21)
-		Application.LoadLevel(4);
+	if(LipsHit >= 16)
+	Application.LoadLevel(4);
 	}
 
 public void OnCollisionEnter2D(Collision2D coll) {
@@ -27,6 +27,5 @@ public void OnCollisionEnter2D(Collision2D coll) {
 
 public void EveryLipHit() {
 	LipsHit += 1;
-	print("I hit a lip");
 }
 }

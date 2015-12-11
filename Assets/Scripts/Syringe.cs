@@ -23,7 +23,7 @@ public class Syringe : MonoBehaviour {
 	DrMovement.y = Input.GetAxis("Vertical");
 
 	Dr.transform.position += DrMovement * DrSpeed ;//* Time.deltaTime;
-	}
+}
 
 public void respawnSyringes () {
     if (Input.GetKeyDown("space"))
