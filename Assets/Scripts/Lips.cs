@@ -3,10 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Lips : MonoBehaviour {
-
-public Button b;
-
- //private Vector3 zeroSize = new Vector3(0,0,0);
+	public Button b;
 
 	// Use this for initialization
 	void Start () {
@@ -17,35 +14,27 @@ public Button b;
 	void Update () {
 	}
 
-private void dissappearLips () {
-
-gameObject.GetComponent<Button>().interactable = false;
-
 }
+//public void sizeUp () {
+	//this.gameObject.Size
+	
+ 		//transform.localScale += new Vector3(.5F, 1, 2);
+ 	//}
 
-private void turnRed () {
-	//if()
-	GetComponent<Image>().color = Color.red;
-	//GetComponent<Button>().color = Color.white;
-	//GetComponent<Button>().color = Color.white;
-	Button b = GetComponent<Button>(); 
+//public void turnRed () {
+	//if(coll.gameObject.tag == "Lip") {
+	//GetComponent<Image>().color = Color.red;
+	/*Button b = GetComponent<Button>(); 
  	ColorBlock cb = b.colors;
  	cb.normalColor = Color.white;
  	cb.highlightedColor = Color.white;
- 	b.colors = cb;
-}
+ 	b.colors = cb;*/
 
-public void sizeUp () {
-	//this.gameObject.Size
-	
- 		transform.localScale += new Vector3(.5F, 1, 2);
- 	
+ 	//}
+//private void dissappearLips () {
 
-}
+	//gameObject.GetComponent<Button>().interactable = false;
 
-public void sizeDown () {
+//public void sizeDown () {
 	//if(transform.localScale > zeroSize)
-	transform.localScale = new Vector3(transform.localScale.x*.2F, transform.localScale.y*.2F, 0);
-}
-
-}
+	//transform.localScale = new Vector3(transform.localScale.x*.2F, transform.localScale.y*.2F, 0);

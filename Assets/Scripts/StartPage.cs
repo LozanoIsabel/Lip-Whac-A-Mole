@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class WinPage : MonoBehaviour {
+public class StartPage : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,5 +12,10 @@ public class WinPage : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public void NextScene()
+	{
+		Application.LoadLevel(1);
 	}
 }

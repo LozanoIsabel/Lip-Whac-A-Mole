@@ -4,6 +4,7 @@ using System.Collections;
 public class Syringe : MonoBehaviour {
 	public GameObject SyringeBullet;
 	public GameObject Dr;
+	public GameObject Hand;
 	public Canvas canvas;
 	public Vector3 DrMovement;
 	public float DrSpeed = 1f;
@@ -21,14 +22,14 @@ public class Syringe : MonoBehaviour {
 	DrMovement.x = Input.GetAxis("Horizontal");
 	DrMovement.y = Input.GetAxis("Vertical");
 
-	Dr.transform.position += DrMovement * DrSpeed * Time.deltaTime;
+	Dr.transform.position += DrMovement * DrSpeed ;//* Time.deltaTime;
 	}
 
 public void respawnSyringes () {
     if (Input.GetKeyDown("space"))
     	{
     	GameObject mySyringe;
-    	mySyringe = Instantiate(SyringeBullet, this.gameObject.transform.position, Quaternion.identity) as GameObject;
+    	mySyringe = Instantiate(SyringeBullet, Hand.transform.position, Quaternion.identity) as GameObject;
     	mySyringe.transform.SetParent(canvas.transform);
         }
 	}
