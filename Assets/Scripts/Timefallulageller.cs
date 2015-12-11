@@ -14,5 +14,11 @@ public class Timefallulageller : MonoBehaviour {
 	void Update () {
 		Timer -= Time.deltaTime;
 		TimerText.text = Timer.ToString ();
+		TimesUp();
+	}
+
+public void TimesUp () {
+	if(Timer <= 0)
+		Application.LoadLevel(3);
 	}
 }

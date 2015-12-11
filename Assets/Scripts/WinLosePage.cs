@@ -3,27 +3,17 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class WinLosePage : MonoBehaviour {
-	public Canvas canvasWin;
-	public Canvas canvasLose;
-	public int Score;
-	public GameObject Dr;
-	public GameObject Lips;
-
-
+	public int LipsHit;
 	// Use this for initialization
 	void Start () {
+		LipsHit = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-	winState ();
-	
+		if(LipsHit == 21)
+		Application.LoadLevel(4);
 	}
-
-public void winState () {
-
-}
 
 public void OnCollisionEnter2D(Collision2D coll) {
 	if(coll.gameObject.tag == "Lip") {
@@ -31,7 +21,11 @@ public void OnCollisionEnter2D(Collision2D coll) {
 		this.gameObject.SetActive(false);
 		Destroy(this.gameObject);
 		Destroy(coll.gameObject);
-		print ("YOU LOSE");
+		Application.LoadLevel(2);
 		}
 	}
+
+public void EveryLipHit() {
+	LipsHit += 1;
+}
 }
